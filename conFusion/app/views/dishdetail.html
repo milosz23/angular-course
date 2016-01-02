@@ -2,12 +2,16 @@
     <div class="container">
         <div class="row row-content" ng-controller="DishDetailController">
             <div class="col-xs-12">
+            <button class="btn btn-xs btn-primary pull-right"
+                    type="button" ui-sref="app.menu">
+                    Back to Menu
+                </button>
                 <ul class="media-list">
                     <li class="media">
                         <div class="media-left media-middle">
-                            <a href="#">
+                            <a ui-sref="app.dishdetails({id: dish._id})">
                             <img class="media-object img-thumbnail"
-                             ng-src={{dish.image}} alt="Uthappizza">
+                            ng-src={{dish.image}} alt="Uthappizza">
                             </a>
                         </div>
                         <div class="media-body">
@@ -19,6 +23,7 @@
                     </li>
                 </ul>
             </div>
+
             <div class="col-xs-9 col-xs-offset-1">
                 Customer comments: 
                 <label for="sortComments">Sort by </label><input class="small" ng-model="sortBy">
